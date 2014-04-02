@@ -1,0 +1,13 @@
+<form class="form-signin" role="form" name="siginIn" ng-submit="authenticate(siginIn.$valid)" novalidate>
+  <h2 class="form-signin-heading">Please sign in</h2>
+  <p ng-show="message" class="bg-info">{{message}}</p>
+  <input type="email" name="email" class="form-control" placeholder="Email address" ng-model="email" required autofocus>
+  <input type="password" name="password" class="form-control" placeholder="Password" ng-model="password" required>
+  <label class="checkbox">
+    <input type="checkbox" name="remember" ng-model="remember"> Remember me
+  </label>
+  <input type="submit" class="btn btn-lg btn-primary btn-block" ng-disabled="siginIn.$invalid" value="Sign in">
+  <p class="signup-label">Don't have an account? <a href="#/users/new">Sign up</a></p>
+  <p ng-show="siginIn.password.$invalid && !siginIn.password.$pristine" class="text-danger" > * Password is required.</p>
+  <p ng-show="siginIn.email.$invalid && !siginIn.email.$pristine" class="text-danger"> * Enter a valid email.</p>
+</form>

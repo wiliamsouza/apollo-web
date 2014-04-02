@@ -1,0 +1,15 @@
+<form class="form-signin" role="form" name="siginUp" ng-submit="new(siginUp.$valid)" novalidate>
+  <h2 class="form-signin-heading">Please sign up</h2>
+  <p ng-show="message" class="bg-info">{{message}}</p>
+  <input type="text" name="name" class="form-control" placeholder="Full name" ng-model="name" required autofocus>
+  <input type="email" name="email" class="form-control" placeholder="Your email" ng-model="email" required>
+  <input type="password" name="password" class="form-control" placeholder="Password" ng-model="password" required>
+  <input type="password" name="pwd" class="form-control" placeholder="Password again" ng-model="pwd" required>
+  <input type="submit" class="btn btn-lg btn-primary btn-block signup-button" ng-disabled="siginUp.$invalid || (pwd != password)" value="Sign up">
+  <p class="signin-label">Already have an account? <a href="#/users/authenticate">Sign in</a></p>
+  <p ng-show="siginUp.name.$invalid && !siginUp.name.$pristine" class="text-danger"> * Name is required.</p>
+  <p ng-show="siginUp.email.$invalid && !siginUp.email.$pristine" class="text-danger"> * Enter a valid email.</p>
+  <p ng-show="siginUp.password.$invalid && !siginUp.password.$pristine" class="text-danger" > * Password is required.</p>
+  <p ng-show="siginUp.pwd.$invalid && !siginUp.pwd.$pristine" class="text-danger" > * Password again is required.</p>
+  <p ng-show="(siginUp.password.$dirty && siginUp.pwd.$dirty) && (pwd != password)" class="text-danger" > * Passwords don't match.</p>
+</form>
