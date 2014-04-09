@@ -6,10 +6,11 @@ angular.module('apolloApp')
     $scope.email = '';
     $scope.password = '';
     $scope.pwd = '';
+    $scope.message = '';
     $scope.new = function(isValid){
       var data = {'name': $scope.name, 'email': $scope.email, 'password': $scope.password};
       if (isValid) {
-        $http({method: 'POST', url: 'http://localhost:8000/users', data: data}).
+        $http({method: 'POST', url: 'http://127.0.0.1:8000/users', data: data}).
           success(function(data, status, headers, config) {
             $location.path('/users/authenticate');
           }).
