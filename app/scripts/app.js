@@ -53,7 +53,7 @@ angular
       });
   })
   .run(function ($rootScope, $window, $route, $location) {
-    $rootScope.$on('$routeChangeStart', function(event, targetRoute, currentRoute) {
+    $rootScope.$on('$routeChangeStart', function(event, targetRoute) {
       if (targetRoute.access.signInRequired && !$window.localStorage.token) {
         $route.reload();
         $location.path('/users/authenticate');
