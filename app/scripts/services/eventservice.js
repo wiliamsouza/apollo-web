@@ -8,7 +8,7 @@ angular.module('apolloApp')
     ws.onopen = function() {
       console.log('Websocket has been opened!');
     };
-    
+
     ws.onmessage = function(message) {
       console.log(message);
     };
