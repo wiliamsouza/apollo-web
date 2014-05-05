@@ -48,6 +48,13 @@ angular
           signInRequired: false
         }
       })
+      .when('/devices', {
+        templateUrl: 'views/devices/list.html',
+        controller: 'DevicesCtrl',
+        access: {
+          signInRequired: true
+        }
+      })
       .otherwise({
         redirectTo: '/'
       });
