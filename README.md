@@ -1,5 +1,5 @@
 Apollo web
-----------
+==========
 
 
 ```
@@ -18,7 +18,7 @@ npm install -g bower
 ```
 
 ```
-gem update --system 
+gem update --system
 gem install compass
 ```
 
